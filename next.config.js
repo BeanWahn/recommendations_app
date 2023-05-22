@@ -4,7 +4,10 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: false,
-  experimental: { appDir: true },
+  experimental: { 
+    appDir: true,
+    serverComponentsExternalPackages: ["@prisma/client", "bcryptjs"] 
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
